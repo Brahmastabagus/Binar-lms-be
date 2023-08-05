@@ -14,7 +14,7 @@ module.exports = {
     */
     await queryInterface.bulkInsert('users', [{
       name: "Brahmasta Bagus",
-      number: "$2b$10$95pPnAVjvdxMy3T6FG1GquL3E5b98npPt6t/8EOAYNroB0emvC9du",
+      number: 5678,
       createdAt: new Date(),
       updatedAt: new Date()
     }], {});
