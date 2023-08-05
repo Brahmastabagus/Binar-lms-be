@@ -12,12 +12,20 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-    await queryInterface.bulkInsert('users', [{
-      name: "Brahmasta Bagus",
-      number: 5678,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }], {});
+    await queryInterface.bulkInsert('users', [
+      {
+        name: "Brahmasta",
+        number: 5678,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        name: "Bagus",
+        number: 2345,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      }
+    ], {});
   },
 
   async down(queryInterface, Sequelize) {

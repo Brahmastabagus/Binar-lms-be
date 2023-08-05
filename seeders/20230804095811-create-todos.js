@@ -40,6 +40,24 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date()
       },
+      {
+        title: "Organize closet.",
+        desc: "Sort and tidy up clothes in the closet.",
+        date: new Date(),
+        priority: "medium",
+        user_id: 2,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        title: "Exercise.",
+        desc: "Go for a jog in the park.",
+        date: new Date(),
+        priority: "low",
+        user_id: 2,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
     ], {});
   },
 
