@@ -12,18 +12,18 @@ const getUsers = async (req, res) => {
     if (data.length) {
       return res.status(200).json({
         status: "success",
-        data: data
+        data
       })
     } else {
       return res.status(500).json({
-        status: "No Available data.",
-        data: []
+        status: "failed",
+        message: "No Available data."
       })
     }
 
   } catch (error) {
     res.status(400).json({
-      status: "success",
+      status: "failed",
       message: error.message
     })
   }
@@ -60,7 +60,8 @@ const login = async (req, res) => {
       }, process.env.JWT_SIGNATURE_KEY)
 
       res.status(200).json({
-        status: `You have successfully logged in`,
+        status: `success`,
+        message: `You have successfully logged in`,
         data: {
           token
         }
