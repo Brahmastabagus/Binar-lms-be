@@ -13,10 +13,14 @@ module.exports = {
         type: Sequelize.STRING
       },
       desc: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       date: {
         type: Sequelize.DATE
+      },
+      completed: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false
       },
       priority: {
         type: Sequelize.ENUM(["high", "medium", "low"]),

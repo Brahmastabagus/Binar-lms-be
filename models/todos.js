@@ -19,8 +19,9 @@ module.exports = (sequelize, DataTypes) => {
   }
   todos.init({
     title: DataTypes.STRING,
-    desc: DataTypes.STRING,
+    desc: DataTypes.TEXT,
     date: DataTypes.DATE,
+    completed: DataTypes.BOOLEAN,
     priority: DataTypes.ENUM(["high", "medium", "low"]),
     user_id: DataTypes.INTEGER
   }, {
