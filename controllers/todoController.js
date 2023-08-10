@@ -147,10 +147,45 @@ const deleteTodo = async (req, res) => {
   }
 }
 
+const setCompleted = async (req, res) => {
+  try {
+    const id = req.params.id
+
+    const dataId = await todos.findByPk(id)
+
+    // TODO: Validasi apakah id ada
+    if (dataId === null) {
+      return res.status(404).json({
+        status: 'failed',
+        message: `Data with id ${id}, not found`
+      })
+    }
+
+    await todos.update({
+      completed: !dataId.completed
+    }, {
+      where: {
+        id
+      }
+    })
+
+    res.status(200).json({
+      status: 'success',
+      message: `Data with index ${id} has been successfully updated`
+    })
+  } catch (err) {
+    res.status(400).json({
+      status: "failed",
+      message: err.message
+    })
+  }
+}
+
 module.exports = {
   getTodos,
   getTodoUser,
   postTodo,
   updateTodo,
-  deleteTodo
+  deleteTodo,
+  setCompleted
 }
