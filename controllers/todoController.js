@@ -48,7 +48,7 @@ const getTodoUser = async (req, res) => {
     } else {
       return res.status(404).json({
         status: 'failed',
-        message: `Data with id ${id}, not found`
+        message: `Data not found`
       })
     }
   } catch (err) {
@@ -70,7 +70,7 @@ const postTodo = async (req, res) => {
 
     res.status(201).json({
       status: 'success',
-      message: "Data has been successfully added"
+      message: "The data has been successfully added"
     })
   } catch (error) {
     res.status(400).json({
@@ -91,7 +91,7 @@ const updateTodo = async (req, res) => {
     if (dataId === null) {
       return res.status(404).json({
         status: 'failed',
-        message: `Data with id ${id}, not found`
+        message: `Data not found`
       })
     }
 
@@ -105,7 +105,7 @@ const updateTodo = async (req, res) => {
 
     res.status(200).json({
       status: 'success',
-      message: `Data with index ${id} has been successfully updated`
+      message: `The data has been successfully updated`
     })
   } catch (err) {
     res.status(400).json({
@@ -125,7 +125,7 @@ const deleteTodo = async (req, res) => {
     if (dataId === null) {
       return res.status(404).json({
         status: 'failed',
-        message: `Data with id ${id}, not found`
+        message: `Data not found`
       })
     }
 
@@ -137,7 +137,7 @@ const deleteTodo = async (req, res) => {
 
     res.status(200).json({
       status: 'success',
-      message: `The data with index ${id} has been successfully deleted`
+      message: `The data has been successfully deleted`
     })
   } catch (err) {
     res.status(400).json({
@@ -157,7 +157,7 @@ const setCompleted = async (req, res) => {
     if (dataId === null) {
       return res.status(404).json({
         status: 'failed',
-        message: `Data with id ${id}, not found`
+        message: `Data not found`
       })
     }
 
@@ -171,7 +171,7 @@ const setCompleted = async (req, res) => {
 
     res.status(200).json({
       status: 'success',
-      message: `Data with index ${id} has been successfully updated`
+      message: `The data has been successfully updated`
     })
   } catch (err) {
     res.status(400).json({
