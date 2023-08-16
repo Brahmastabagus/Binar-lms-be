@@ -140,7 +140,7 @@ To run this project, you will need to add the following environment variables to
 
 #### Delete todo
 ```http
-  POST /api/v1/todo/:id
+  DELETE /api/v1/todo/:id
 ```
 
 | Parameter | Type          | Description                |
